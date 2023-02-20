@@ -21,8 +21,14 @@ mongoose
 	.catch((err) => console.log("DB CONNECTION ERROR", err));
 
 // middleware
+app.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	next();
+  });
+
+
 app.use(morgan("dev"));
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: 'https://3000-clearsky1359-ytmernauth-jnygwczv0sp.ws-us87.gitpod.io', credentials: true }));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());

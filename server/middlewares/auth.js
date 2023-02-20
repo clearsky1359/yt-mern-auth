@@ -14,7 +14,7 @@ exports.verifyToken = (req, res, next) => {
 	try {
 		// verify the token jwt.verify
 		// throws an erro if token has expired or has an invalid signature
-		payload = jwt.verify(accessToken, process.env.JWT_SECRET);
+		payload = jwt.verify(accessToken, 'ali');
 		req._id = payload._id;
 
 		next();
