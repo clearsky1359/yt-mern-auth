@@ -13,7 +13,7 @@ const app = express();
 
 // db
 mongoose
-	.connect(process.env.MONGO_URI, {
+	.connect("mongodb+srv://nikan:Nikan2017@cluster0.i9tio.mongodb.net/?retryWrites=true&w=majority", {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})

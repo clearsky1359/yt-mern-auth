@@ -2,7 +2,7 @@ export const register = async ({ username, email, password } = {}) => {
 	const user = { username, email, password };
 
 	try {
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
+		const res = await fetch(`https://8080-clearsky1359-ytmernauth-jnygwczv0sp.ws-us87.gitpod.io/register`, {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
@@ -21,7 +21,7 @@ export const login = async ({ email, password } = {}) => {
 	const user = { email, password };
 
 	try {
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
+		const res = await fetch(`https://8080-clearsky1359-ytmernauth-jnygwczv0sp.ws-us87.gitpod.io/login`, {
 			method: "POST",
 			credentials: "include",
 			headers: {
@@ -39,7 +39,7 @@ export const login = async ({ email, password } = {}) => {
 
 export const logout = async () => {
 	try {
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/logout`, {
+		const res = await fetch(`https://8080-clearsky1359-ytmernauth-jnygwczv0sp.ws-us87.gitpod.io/logout`, {
 			method: "GET",
 			credentials: "include",
 		});
@@ -51,7 +51,7 @@ export const logout = async () => {
 
 export const getUser = async () => {
 	try {
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/user`, {
+		const res = await fetch(`https://8080-clearsky1359-ytmernauth-jnygwczv0sp.ws-us87.gitpod.io/user`, {
 			method: "GET",
 			credentials: "include",
 		});
